@@ -42,7 +42,7 @@ admin.initializeApp({
             Middleware Will Run on Every Request
    ===================================================== */
 
-app.use(cors());
+// app.use(cors());
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
