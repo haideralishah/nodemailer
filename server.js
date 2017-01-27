@@ -48,6 +48,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+app.use(function (req, res, next) {
+    if (req.headers['x-forwarded-proto'] != 'https')
+        res.redirect('https://immense-depths-75143.herokuapp.com' + req.url)
+    else
+        next()
+})
 
 app.get('/deleteUser', function (req, res) {
     var uidToDelete = req.headers.uid;
