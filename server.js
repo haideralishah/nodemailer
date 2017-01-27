@@ -15,27 +15,27 @@ var __dirname = './user_directory/R5/R5_1';
 var uploadPath = './user_directory/R5/';
 var multer = require('multer');
 var fileUpload = require('express-fileupload');
-var firebase = require("firebase");
-var admin = require("firebase-admin");
+// var firebase = require("firebase");
+// var admin = require("firebase-admin");
 var nodemailer = require('nodemailer');
 // import * as admin from "firebase-admin";
 
-var config = {
-    apiKey: "AIzaSyA6ozf67ohbTk9EvSr9gFeX4layz6aN7jA",
-    authDomain: "sample-98876.firebaseapp.com",
-    databaseURL: "https://sample-98876.firebaseio.com",
-    storageBucket: "sample-98876.appspot.com",
-    messagingSenderId: "975075020136"
-};
-firebase.initializeApp(config);
+// var config = {
+//     apiKey: "AIzaSyA6ozf67ohbTk9EvSr9gFeX4layz6aN7jA",
+//     authDomain: "sample-98876.firebaseapp.com",
+//     databaseURL: "https://sample-98876.firebaseio.com",
+//     storageBucket: "sample-98876.appspot.com",
+//     messagingSenderId: "975075020136"
+// };
+// firebase.initializeApp(config);
 
 
-var serviceAccount = require("./firebase-adminsdk.json");
+// var serviceAccount = require("./firebase-adminsdk.json");
 
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://sample-98876.firebaseio.com"
-});
+// admin.initializeApp({
+//     credential: admin.credential.cert(serviceAccount),
+//     databaseURL: "https://sample-98876.firebaseio.com"
+// });
 
 
 /* =====================================================
@@ -50,7 +50,7 @@ app.use(cookieParser());
 
 // app.use(function (req, res, next) {
 //     if (req.headers['x-forwarded-proto'] != 'https')
-//         res.redirect('https://immense-depths-75143.herokuapp.com' + req.url)
+//         res.redirect('https://immense-depths-75143.herokuapp.com')
 //     else
 //         next()
 // })
